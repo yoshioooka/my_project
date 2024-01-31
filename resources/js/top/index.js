@@ -2,6 +2,8 @@ import * as Vue from "vue";
 import { ref } from "vue";
 import SampleComponent from "./SampleComponent.vue"; // 追加
 
+// Vue.config.productionTip = false;
+
 const application = {
     setup() {
         const name = ref("");
@@ -27,11 +29,13 @@ const application = {
             validate,
         };
     },
-    // 追加
+
     components : {
         "sample-component" : SampleComponent,
     }
 };
+
+
 
 try {
     let mainElement = document.getElementsByTagName("main")[0];

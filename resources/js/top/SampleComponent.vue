@@ -17,11 +17,24 @@
         </div>
       </section>
     </section>
+
+    <div>
+      <button @click="openModal">Open Modal</button>
+
+      <!-- モーダルコンポーネントを使用 -->
+      <Modal v-if="isModalVisible" @close="closeModal">
+        <!-- モーダル内のコンテンツをここに配置 -->
+        <h2>Hello from Modal!</h2>
+      </Modal>
+    </div>
   </template>
 
   <script>
   import { ref } from "vue";
   import Axios from "axios";
+  //import Modal from './Modal.vue';
+
+
 
   export default {
     setup(props, context) {
@@ -38,6 +51,24 @@
       tabBody2 : String, // 追加
       tabBody3 : String, // 追加
     },
+
+    // components: {
+    //   Modal
+    // },
+    // data() {
+    //   return {
+    //     isModalVisible: false
+    //   };
+    // },
+    // methods: {
+    //   openModal() {
+    //     this.isModalVisible = true;
+    //   },
+    //   closeModal() {
+    //     this.isModalVisible = false;
+    //   }
+    // }
+
   };
   </script>
 
@@ -84,4 +115,24 @@
       }
     }
   }
+/* モーダルのスタイリングをここに追加 */
+    .modal {
+        /* モーダルのスタイルを設定 */
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .modal-content {
+        /* モーダル内のコンテンツスタイルを設定 */
+        background: #fff;
+        padding: 20px;
+    }
+
   </style>

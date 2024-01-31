@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title></title>
     <link rel="stylesheet" href="/css/build/top/index.css">
+
 </head>
 
 <body>
@@ -30,9 +31,13 @@
         <!-- 変更 -->
         <sample-component tab-name1="A" tab-name2="B" tab-name3="C" tab-body1="<?= $phpValue ?>" tab-body2="tabBody2-B" tab-body3="tabBody3-C"></sample-component>
         <sample-component tab-name1="D" tab-name2="E" tab-name3="F" tab-body1="tabBody1-D" tab-body2="tabBody2-E" tab-body3="tabBody3-F"></sample-component>
+
+        <!--Modal Component を作成 -->
+
     </main>
 
     <script src="/js/build/top/index.js"></script>
+
 </body>
 
 </html>
